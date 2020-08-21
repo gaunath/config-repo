@@ -1,0 +1,23 @@
+# DAAS API
+app:
+# Generate DAAS Token
+  daastoken:
+    url: https://mdw-pocep.auth.us-east-1.amazoncognito.com/oauth2/token
+    apikey: OqnKY3M1lI80RfgCZ5s6x9y7UTrexNv23xfLk4A0
+    auth: Basic MWJsN2U4dTV0Zmhxb3U1N2l0ZmUyZ2hidXA6MWRuYTczM21zODRzNzBoZGxzbzk4aDlhazVzdm00dWU2Y3NrNmdxNTNubGh0dWJwNDJvYw==
+    granttype: client_credentials
+    scope: mdw-pocep/json.write
+    clientid: 1bl7e8u5tfhqou57itfe2ghbup
+    clientsecret: 1dna733ms84s70hdlso98h9ak5svm4ue6csk6gq53nlhtubp42oc
+    refreshTokenFlag: false
+    refresh-time: 5
+
+  daasapi:
+    url: https://54tn90ils7.execute-api.us-east-1.amazonaws.com/
+    xapikey: OqnKY3M1lI80RfgCZ5s6x9y7UTrexNv23xfLk4A0
+    apikey: OqnKY3M1lI80RfgCZ5s6x9y7UTrexNv23xfLk4A0
+    prefix: dev/v1/pocep
+    reference-product: ${app.daasapi.url}${app.daasapi.prefix}/reference/products
+    provider-product: ${app.daasapi.url}${app.daasapi.prefix}/providers/product
+    mixer-hierarchy: ${app.daasapi.url}${app.daasapi.prefix}/mixer/hierarchy
+    mixer-product: ${app.daasapi.url}${app.daasapi.prefix}/mixers/products
